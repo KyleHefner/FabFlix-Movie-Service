@@ -1,0 +1,107 @@
+[2019/06/08 13:16:21][CONFIG][initLogger]  Logging initialized.
+[2019/06/08 13:16:21][CONFIG][initService]  Starting service...
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Hostname: 127.0.0.1
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Port: 3993
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Path: /api/billing
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Logger output file: billing.log
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database port: 3308
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database username: cs122b_db39
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database name: cs122b_db39
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/08 13:16:21][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:16:21][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/08 13:16:21][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3308/cs122b_db39?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:16:22][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3308/cs122b_db39?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Final URI: http://127.0.0.1:3993/api/billing
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/08 13:16:22][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/08 13:16:23][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/08 13:16:23][CONFIG][initService]  Service initialized.
+[2019/06/08 13:21:11][INFO][RetrieveCart]  Received request to retrieve cart
+[2019/06/08 13:21:11][INFO][RetrieveCart]  jsonTxt = {"email":"user@newuser.com"}
+[2019/06/08 13:21:11][INFO][RetrieveCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:11][INFO][RetrieveCart]  Query executed successfully
+[2019/06/08 13:21:11][INFO][RetrieveCart]  No entry exists in cart database
+[2019/06/08 13:22:12][INFO][InsertCart]  Received request to insert into cart
+[2019/06/08 13:22:12][INFO][InsertCart]  jsonText = {"email":"user@newuser.com","movieId":"tt0377085","quantity":1}
+[2019/06/08 13:22:12][INFO][InsertIntoCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO carts(email, movieId, quantity) Values ('user@newuser.com','tt0377085',1)
+[2019/06/08 13:22:12][INFO][InsertIntoCart]  Query executed successfully
+[2019/06/08 13:22:45][INFO][InsertCart]  Received request to insert into cart
+[2019/06/08 13:22:45][INFO][InsertCart]  jsonText = {"email":"user@newuser.com","movieId":"tt0395445","quantity":2}
+[2019/06/08 13:22:45][INFO][InsertIntoCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO carts(email, movieId, quantity) Values ('user@newuser.com','tt0395445',2)
+[2019/06/08 13:22:45][INFO][InsertIntoCart]  Query executed successfully
+[2019/06/08 13:23:31][INFO][InsertCart]  Received request to insert into cart
+[2019/06/08 13:23:31][INFO][InsertCart]  jsonText = {"email":"user@newuser.com","movieId":"tt0311473","quantity":3}
+[2019/06/08 13:23:31][INFO][InsertIntoCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO carts(email, movieId, quantity) Values ('user@newuser.com','tt0311473',3)
+[2019/06/08 13:23:31][INFO][InsertIntoCart]  Query executed successfully
+[2019/06/08 13:23:36][INFO][RetrieveCart]  Received request to retrieve cart
+[2019/06/08 13:23:36][INFO][RetrieveCart]  jsonTxt = {"email":"user@newuser.com"}
+[2019/06/08 13:23:36][INFO][RetrieveCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:36][INFO][RetrieveCart]  Query executed successfully
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  Received request to delete from cart
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  jsonTxt = {"email":"user@newuser.com","movieId":"tt0395445"}
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'user@newuser.com' and movieId = 'tt0395445'
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  Query executed successfully
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM carts  WHERE email = 'user@newuser.com' and movieId = 'tt0395445'
+[2019/06/08 13:23:47][INFO][DeleteFromCart]  Query executed successfully
+[2019/06/08 13:23:58][INFO][UpdateCart]  Received request to update cart
+[2019/06/08 13:23:58][INFO][UpdateCart]  jsonTxt = {"email":"user@newuser.com","movieId":"tt0377085","quantity":5}
+[2019/06/08 13:23:58][INFO][UpdateCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'user@newuser.com' and movieId = 'tt0377085'
+[2019/06/08 13:23:58][INFO][UpdateCart]  Query executed successfully
+[2019/06/08 13:23:58][INFO][UpdateCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE carts SET quantity = 5 WHERE email = 'user@newuser.com' and movieId = 'tt0377085'
+[2019/06/08 13:23:58][INFO][UpdateCart]  Query executed successfully
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Received request to insert customer
+[2019/06/08 13:24:08][INFO][InsertCustomer]  jsonTxt = {"email":"user@newuser.com","firstName":"Kyle","lastName":"Hefner","ccId":"9999888877776666123","address":"1234, Campus Dr., Irvine, CA, 92697"}
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM creditcards WHERE id = '9999888877776666123'
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Query executed successfully
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM customers WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Query executed successfully
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO customers (email, firstName, lastName, ccId, address) VALUES ('user@newuser.com', 'Kyle', 'Hefner', '9999888877776666123', '1234, Campus Dr., Irvine, CA, 92697')
+[2019/06/08 13:24:08][INFO][InsertCustomer]  Query executed successfully
+[2019/06/08 13:24:12][INFO][PlaceOrder]  received request to place order
+[2019/06/08 13:24:12][INFO][PlaceOrder]  jsonTxt = {"email":"user@newuser.com"}
+[2019/06/08 13:24:12][INFO][PlaceOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM customers WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:13][INFO][PlaceOrder]  Query executed successfully
+[2019/06/08 13:24:13][INFO][PlaceOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts, movie_prices WHERE carts.movieId = movie_prices.movieId AND email = 'user@newuser.com'
+[2019/06/08 13:24:13][INFO][PlaceOrder]  Query executed successfully
+[2019/06/08 13:24:13][INFO][createPayment]  Amount details: {
+  "currency": "USD",
+  "total": "119.52"
+}
+[2019/06/08 13:24:14][INFO][createPayment]  Payment was created
+[2019/06/08 13:24:14][INFO][createPayment]  redirect URL: https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9UD196309T8618836
+[2019/06/08 13:24:14][INFO][PlaceOrder]  created payment success
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Executing query com.mysql.cj.jdbc.CallableStatement: CALL insert_sales_transactions('user@newuser.com','tt0311473',3,'2019-06-08','EC-9UD196309T8618836')
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Query executed successfully
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Executing query com.mysql.cj.jdbc.CallableStatement: CALL insert_sales_transactions('user@newuser.com','tt0377085',5,'2019-06-08','EC-9UD196309T8618836')
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Query executed successfully
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM carts WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:15][INFO][PlaceOrder]  Query executed successfully
+[2019/06/08 13:24:37][INFO][CompleteOrder]  received request to complete order
+[2019/06/08 13:24:37][INFO][CompleteOrder]  PaymentId: PAYID-LT6BS3Y8B439535FF172413D
+[2019/06/08 13:24:37][INFO][CompleteOrder]  PayerId: KHNSXP7U245R2
+[2019/06/08 13:24:37][INFO][CompleteOrder]  Token: EC-9UD196309T8618836
+[2019/06/08 13:24:38][INFO][CompleteOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM transactions WHERE token = 'EC-9UD196309T8618836'
+[2019/06/08 13:24:38][INFO][CompleteOrder]  Query executed successfully
+[2019/06/08 13:24:38][INFO][CompleteOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE transactions SET transactionId = '5MY64677J3872953R' WHERE token = 'EC-9UD196309T8618836'
+[2019/06/08 13:24:38][INFO][CompleteOrder]  Query executed successfully
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  received request to retrieve order
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  jsonTxt = {"email":"user@newuser.com"}
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM customers WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Query executed successfully
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sales, transactions, movie_prices WHERE sales.id = transactions.sId AND movie_prices.movieId = sales.movieId AND email = 'user@newuser.com'
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Query executed successfully
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Got sale information with the transactionId...
+[2019/06/08 13:24:48][INFO][RetrieveOrder]  Adding an item to existing transaction
+[2019/06/08 13:24:58][INFO][RetrieveCart]  Received request to retrieve cart
+[2019/06/08 13:24:58][INFO][RetrieveCart]  jsonTxt = {"email":"user@newuser.com"}
+[2019/06/08 13:24:58][INFO][RetrieveCart]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM carts WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:58][INFO][RetrieveCart]  Query executed successfully
+[2019/06/08 13:24:58][INFO][RetrieveCart]  No entry exists in cart database

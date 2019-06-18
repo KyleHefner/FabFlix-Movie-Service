@@ -1,0 +1,25 @@
+[2019/06/05 22:57:33][CONFIG][initLogger]  Logging initialized.
+[2019/06/05 22:57:33][CONFIG][initService]  Starting service...
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Port: 1234
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Path: /api/idm
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Logger output file: idm.log
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database hostname: null
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database port: 0
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database username: null
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database password provided? false
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database name: null
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database driver: null
+[2019/06/05 22:57:33][CONFIG][currentConfigs]  Database connection settings: null
+[2019/06/05 22:57:33][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/05 22:57:33][CONFIG][connectToDatabase]  Database configurations not valid. Cannot connect to database.
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:1234/api/idm
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/05 22:57:33][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/05 22:57:34][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/05 22:57:34][CONFIG][initService]  Service initialized with error(s)
