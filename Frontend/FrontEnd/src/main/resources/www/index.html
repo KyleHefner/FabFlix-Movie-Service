@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FabFlix</title>
+    <link href = "css/Style.css" rel="stylesheet" type="text/css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type = "text/javascript" src = "javascripts/navBar.js"></script>
+    <script type = "text/javascript" src = "javascripts/Login.js"></script>
+    <script type = "text/javascript" src = "javascripts/Search.js"></script>
+    <script type = "text/javascript" src = "javascripts/Order.js"></script>
+    <script type = "text/javascript" src = "javascripts/SingleMovie.js"></script>
+    <script type = "text/javascript" src = "javascripts/RateMovie.js"></script>
+    <script type = "text/javascript" src = "javascripts/Checkout.js"></script>
+    <script type = "text/javascript" src = "javascripts/updateCart.js"></script>
+    <script type = "text/javascript" src = "javascripts/RemoveFromCart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    <script>
+        Cookies.remove('sessionID');
+        Cookies.remove('email');
+    </script>
+
+
+
+
+</head>
+<body>
+
+
+
+
+<header>
+    <nav>
+        <ul>
+            <li><h1>FABFLIX</h1></li>
+            <li><button type = "button" id = "Home">Home</button></li>
+            <li><button type = "button" id = "Login">Login</button></li>
+            <li><button type = "button" id = "Register">Register</button></li>
+            <li><button type = "button" id = "Search">Search</button></li>
+            <li><button type = "button" id = "ShoppingCart">Cart</button></li>
+            <li><button type = "button" id = "OrderHistory">Order History</button></li>
+
+            <li><p id = "SessionHolder"></p>
+        </ul>
+    </nav>
+</header>
+
+
+
+<div id = 'Response'></div>
+
+
+
+
+
+
+</body>
+</html>

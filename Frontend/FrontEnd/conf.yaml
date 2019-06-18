@@ -1,0 +1,9 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 3990
+  path: /
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: idm.log
