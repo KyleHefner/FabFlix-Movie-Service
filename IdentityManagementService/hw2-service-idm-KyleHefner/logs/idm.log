@@ -1,0 +1,123 @@
+[2019/04/29 18:56:41][CONFIG][initLogger]  Logging initialized.
+[2019/04/29 18:56:41][CONFIG][initService]  Starting service...
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Scheme: http://
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Port: 3991
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Path: /api/idm
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Logger output file: idm.log
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database username: cs122b_db39
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  dbPassword Provided?: true
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database port: 3307
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database name: cs122b_db39
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  Database settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  timeout: 600000
+[2019/04/29 18:56:41][CONFIG][currentConfigs]  expiration: 1800000
+[2019/04/29 18:56:41][CONFIG][connectToDatabase]  Connecting to database...
+[2019/04/29 18:56:41][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122b_db39?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/04/29 18:56:41][CONFIG][connectToDatabase]  Connected to database: com.mysql.cj.jdbc.ConnectionImpl@25b485ba
+[2019/04/29 18:56:41][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/04/29 18:56:41][CONFIG][initHTTPServer]  Building URI from configs
+[2019/04/29 18:56:41][CONFIG][initHTTPServer]  Set Jersey resources
+[2019/04/29 18:56:41][CONFIG][initHTTPServer]  Set Jackson as serializer
+[2019/04/29 18:56:41][CONFIG][initHTTPServer]  Creating Http Server
+[2019/04/29 18:56:42][CONFIG][initHTTPServer]  HTTP server started.
+[2019/04/29 18:56:42][CONFIG][initService]  Service initialized.
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:56:47][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:56:48][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:59:56][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  User was found
+[2019/04/29 18:59:57][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:11:19][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  received Login request
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  {"email":"Hfiakod@test.com","plevel":5}
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  request model is valid
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'Hfiakod@test.com'
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  Query executed successfully
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User was found
+[2019/04/29 19:14:36][INFO][VerifyPrivilege]  User has sufficient privilege
+[2019/04/30 00:15:56][INFO][VerifyPrivilege]  received Login request
+[2019/04/30 00:15:56][INFO][VerifyPrivilege]  {"email":"o33olcj@test.com","plevel":5}
+[2019/04/30 00:15:56][INFO][VerifyPrivilege]  request model is valid
+[2019/04/30 00:15:56][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'o33olcj@test.com'
+[2019/04/30 00:15:57][WARNING][VerifyPrivilege]  Unable to verify privilege level for o33olcj@test.com

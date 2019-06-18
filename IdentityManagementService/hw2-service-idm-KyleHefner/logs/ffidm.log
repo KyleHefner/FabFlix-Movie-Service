@@ -1,0 +1,434 @@
+[2019/06/08 13:15:28][CONFIG][initLogger]  Logging initialized.
+[2019/06/08 13:15:28][CONFIG][initService]  Starting service...
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Port: 3991
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Path: /api/idm
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Logger output directory: ./logs/ff
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Logger output file: idm.log
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database username: cs122b_db39
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  dbPassword Provided?: true
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database port: 3307
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database name: cs122b_db39
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  Database settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  timeout: 60000
+[2019/06/08 13:15:28][CONFIG][currentConfigs]  expiration: 18000000000
+[2019/06/08 13:15:28][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/08 13:15:28][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122b_db39?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:15:28][CONFIG][connectToDatabase]  Connected to database: com.mysql.cj.jdbc.ConnectionImpl@25b485ba
+[2019/06/08 13:15:28][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/08 13:15:28][CONFIG][initHTTPServer]  Building URI from configs
+[2019/06/08 13:15:28][CONFIG][initHTTPServer]  Set Jersey resources
+[2019/06/08 13:15:29][CONFIG][initHTTPServer]  Set Jackson as serializer
+[2019/06/08 13:15:29][CONFIG][initHTTPServer]  Creating Http Server
+[2019/06/08 13:15:29][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/08 13:15:29][CONFIG][initService]  Service initialized.
+[2019/06/08 13:19:49][INFO][LoginUser]  received Login request
+[2019/06/08 13:19:49][INFO][LoginUser]  {"email":"random@notAuser.com","password":"Kfizzle1212!"}
+[2019/06/08 13:19:49][INFO][<init>]  checking password
+[2019/06/08 13:19:49][INFO][LoginUser]  request model is valid
+[2019/06/08 13:19:49][INFO][LoginUser]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'random@notAuser.com'
+[2019/06/08 13:19:49][INFO][LoginUser]  Query executed successfully
+[2019/06/08 13:19:49][INFO][LoginUser]  User not found in database
+[2019/06/08 13:20:16][INFO][RegisterUser]  received request to register user
+[2019/06/08 13:20:16][INFO][<init>]  checking password
+[2019/06/08 13:20:16][INFO][RegisterUser]  request model is valid
+[2019/06/08 13:20:16][INFO][isEmailInUse]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email From users WHERE email='user@newuser.com'
+[2019/06/08 13:20:16][INFO][isEmailInUse]  Email not in use
+[2019/06/08 13:20:16][INFO][InsertNewUser]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO users(email,plevel,salt,pword,status) VALUES ('user@newuser.com',5,'fe311774','e1933641fb27aa8abdb9c918c641bb30b2c8c460f086de02ae68a5fe01f34aebb2923afdd5be04d82d60a5552bced70274bb65163aff784649b0fe5b21b7c968',1)
+[2019/06/08 13:20:17][INFO][RegisterUser]  User successfully registered
+[2019/06/08 13:20:39][INFO][LoginUser]  received Login request
+[2019/06/08 13:20:39][INFO][LoginUser]  {"email":"user@newuser.com","password":"1"}
+[2019/06/08 13:20:39][INFO][<init>]  checking password
+[2019/06/08 13:20:39][INFO][isValid]  Password is not valid length
+[2019/06/08 13:20:39][INFO][LoginUser]  request model is invalid
+[2019/06/08 13:20:47][INFO][LoginUser]  received Login request
+[2019/06/08 13:20:47][INFO][LoginUser]  {"email":"user@newuser.com","password":"asdfasdfaaf"}
+[2019/06/08 13:20:47][INFO][<init>]  checking password
+[2019/06/08 13:20:47][INFO][LoginUser]  request model is valid
+[2019/06/08 13:20:47][INFO][LoginUser]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:20:47][INFO][LoginUser]  Query executed successfully
+[2019/06/08 13:20:47][INFO][LoginUser]  hashed password from db: e1933641fb27aa8abdb9c918c641bb30b2c8c460f086de02ae68a5fe01f34aebb2923afdd5be04d82d60a5552bced70274bb65163aff784649b0fe5b21b7c968
+[2019/06/08 13:20:47][INFO][LoginUser]  hashed password from client: 4267f5ba78aa1a11097ff5752896b4b2fbbb16e323d5abdab7db5f7e4d08b8199254bf34913545e9684b7ae739fabd7018d88d8e2324020adb464eb78db92178
+[2019/06/08 13:20:47][INFO][LoginUser]  Passwords did not match
+[2019/06/08 13:20:58][INFO][LoginUser]  received Login request
+[2019/06/08 13:20:58][INFO][LoginUser]  {"email":"user@newuser.com","password":"Kfizzle1212!"}
+[2019/06/08 13:20:58][INFO][<init>]  checking password
+[2019/06/08 13:20:58][INFO][LoginUser]  request model is valid
+[2019/06/08 13:20:58][INFO][LoginUser]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:20:58][INFO][LoginUser]  Query executed successfully
+[2019/06/08 13:20:58][INFO][LoginUser]  hashed password from db: e1933641fb27aa8abdb9c918c641bb30b2c8c460f086de02ae68a5fe01f34aebb2923afdd5be04d82d60a5552bced70274bb65163aff784649b0fe5b21b7c968
+[2019/06/08 13:20:58][INFO][LoginUser]  hashed password from client: e1933641fb27aa8abdb9c918c641bb30b2c8c460f086de02ae68a5fe01f34aebb2923afdd5be04d82d60a5552bced70274bb65163aff784649b0fe5b21b7c968
+[2019/06/08 13:20:58][INFO][LoginUser]  Passwords matched
+[2019/06/08 13:20:58][INFO][revokeSessions]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4, lastUsed = '2019-06-08 13:20:58.682' WHERE email = 'user@newuser.com' AND status = 1
+[2019/06/08 13:20:58][INFO][revokeSessions]  Query executed successfully
+[2019/06/08 13:20:58][INFO][InsertSession]  Revoked all sessions of email: user@newuser.com
+[2019/06/08 13:20:58][INFO][InsertSession]  Creating a new session for email: user@newuser.com
+[2019/06/08 13:20:58][INFO][InsertSession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions(sessionID,email,status,timeCreated,lastUsed,exprTime)VALUES ('ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71','user@newuser.com',1,'2019-06-08 13:20:58.776','2019-06-08 13:20:58.776','2020-01-02 20:20:58.776')
+[2019/06/08 13:20:58][INFO][InsertSession]  Query executed successfully
+[2019/06/08 13:20:58][INFO][LoginUser]  Login successfull
+[2019/06/08 13:21:10][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:21:10][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:10][INFO][VerifySession]  request model is valid
+[2019/06/08 13:21:10][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:21:10][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:10][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:10][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:10][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:10][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:21:10][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:21:10][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:21:10][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:21:10.95' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:10][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:21:30][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:21:30][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:30][INFO][VerifySession]  request model is valid
+[2019/06/08 13:21:30][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:21:30][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:30][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:30][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:30][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:30][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:21:30][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:21:30][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:21:30][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:21:30.934' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:30][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:21:31][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:21:50][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:21:50][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:50][INFO][VerifySession]  request model is valid
+[2019/06/08 13:21:50][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:21:50][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:50][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:50][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:50][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:21:50][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:21:50][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:21:50][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:21:50][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:21:50.747' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:21:50][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:21:50][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:22:01][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:22:01][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:01][INFO][VerifySession]  request model is valid
+[2019/06/08 13:22:01][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:01][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:01][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:01][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:01][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:01][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:22:01][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:22:01][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:22:01][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:22:01.124' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:01][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:22:01][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:22:12][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:22:12][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:12][INFO][VerifySession]  request model is valid
+[2019/06/08 13:22:12][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:12][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:12][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:12][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:12][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:12][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:22:12][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:22:12][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:22:12][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:22:12.282' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:12][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:22:25][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:22:25][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:25][INFO][VerifySession]  request model is valid
+[2019/06/08 13:22:25][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:25][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:25][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:25][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:25][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:25][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:22:25][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:22:25][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:22:25][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:22:25.385' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:25][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:22:25][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:22:40][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:22:40][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:40][INFO][VerifySession]  request model is valid
+[2019/06/08 13:22:40][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:40][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:40][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:40][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:40][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:40][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:22:40][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:22:40][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:22:40][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:22:40.903' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:40][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:22:40][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:22:40][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:22:40][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:22:40][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:41][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:22:41][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:22:41][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:22:45][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:22:45][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:45][INFO][VerifySession]  request model is valid
+[2019/06/08 13:22:45][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:45][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:22:45][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:45][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:45][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:22:45][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:22:45][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:22:45][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:22:45][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:22:45.436' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:22:45][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:06][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:06][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:06][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:06][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:06][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:06][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:06][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:06][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:06][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:06][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:06][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:06][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:06.172' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:06][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:23:06][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:23:08][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:08][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:08][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:08][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:08][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:08][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:08][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:08][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:08][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:08][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:08][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:08][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:08.528' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:08][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:23:08][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:23:09][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:09][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:09][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:09][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:09][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:09][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:09][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:09][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:09][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:09][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:09][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:09][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:09.983' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:10][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:23:10][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:23:26][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:26][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:26][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:26][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:26][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:26][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:26][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:26][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:26][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:26][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:26][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:26][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:26.697' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:26][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  received Login request
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  {"email":"user@newuser.com","plevel":3}
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  request model is valid
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  Query executed successfully
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  User was found
+[2019/06/08 13:23:26][INFO][VerifyPrivilege]  User has insufficient privilege
+[2019/06/08 13:23:30][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:30][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:30][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:30][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:30][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:30][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:30][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:30][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:30][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:30][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:30][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:30][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:30.963' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:31][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:36][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:36][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:36][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:36][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:36][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:36][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:36][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:36][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:36][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:36][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:36][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:36][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:36.822' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:36][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:47][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:47][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:47][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:47][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:47][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:47][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:47][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:47][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:47][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:47][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:47][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:47][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:47.238' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:47][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:23:58][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:23:58][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:58][INFO][VerifySession]  request model is valid
+[2019/06/08 13:23:58][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:58][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:23:58][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:58][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:58][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:23:58][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:23:58][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:23:58][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:23:58][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:23:58.674' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:23:58][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:24:07][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:24:07][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:07][INFO][VerifySession]  request model is valid
+[2019/06/08 13:24:07][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:24:08][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:08][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:08][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:08][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:08][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:24:08][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:24:08][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:24:08][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:24:08.094' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:08][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:24:12][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:24:12][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:12][INFO][VerifySession]  request model is valid
+[2019/06/08 13:24:12][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:24:12][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:12][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:12][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:12][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:12][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:24:12][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:24:12][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:24:12][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:24:12.878' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:12][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:24:47][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:24:47][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:47][INFO][VerifySession]  request model is valid
+[2019/06/08 13:24:47][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:24:47][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:47][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:47][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:47][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:47][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:24:47][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:24:47][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:24:47][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:24:47.985' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:48][INFO][UpdateLastUsedTime]  Query executed successfully
+[2019/06/08 13:24:58][INFO][VerifySession]  received Verify Session request
+[2019/06/08 13:24:58][INFO][VerifySession]  {"email":"user@newuser.com","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:58][INFO][VerifySession]  request model is valid
+[2019/06/08 13:24:58][INFO][VerifySession]  Attempting to verify session for email = user@newuser.com
+ sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:24:58][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM users WHERE email = 'user@newuser.com'
+[2019/06/08 13:24:58][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:58][INFO][VerifySession]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM sessions WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:58][INFO][VerifySession]  Query executed successfully
+[2019/06/08 13:24:58][INFO][VerifySession]  User found for user@newuser.com
+[2019/06/08 13:24:58][INFO][VerifySession]  Session found for user user@newuser.com
+[2019/06/08 13:24:58][INFO][VerifySession]  sessionID = ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+ is still Active and Valid. Updating last used time
+[2019/06/08 13:24:58][INFO][UpdateLastUsedTime]  Executing Query com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET lastUsed = '2019-06-08 13:24:58.627' WHERE sessionID = 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71'
+[2019/06/08 13:24:58][INFO][UpdateLastUsedTime]  Query executed successfully
