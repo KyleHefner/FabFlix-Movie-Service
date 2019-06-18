@@ -1,0 +1,1233 @@
+[2019/06/08 13:14:29][CONFIG][initLogger]  [32mLogging initialized.[0m
+[2019/06/08 13:14:29][CONFIG][initService]  Starting service...
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Port: 3999
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Path: /api/g
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Request Delay: 500
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Number of threads in pool: 3
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Logger output file: gateway.log
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database port: 3310
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database username: cs122b_db39
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database name: cs122b_db39
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM] scheme: http://
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM] hostname: 127.0.0.1
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM] port: 3991
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM] path: /api/idm
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM][EP] Register User: /register
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM][EP] Login User: /login
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM][EP] Verify Session: /session
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [IDM][EP] Verify User Privilege: /privilege
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies] scheme: http://
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies] hostname: 127.0.0.1
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies] port: 3992
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies] path: /api/movies
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Search Movie: /search
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Get Movie: /get
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Add Movie: /add
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Delete Movie: /delete
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Get All Genres: /genre
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Add Genre: /genre/add
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Get All Genres For Movie: /genre
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Search Star: /star/search
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Get Star: /star
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Add Star to Movie: /star/starsin
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Movies][EP] Update Movie Rating: /rating
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing] scheme: http://
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing] hostname: 127.0.0.1
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing] port: 3993
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing] path:/api/billing
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Update Cart: /cart/insert
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Update Cart: /cart/update
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Delete Cart: /cart/delete
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Retrieve Cart: /cart/retrieve
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Clear Cart: /cart/clear
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Insert Credit Card: /creditcard/insert
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Update Credit Card: /creditcard/update
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Delete Credit Card: /creditcard/delete
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Retrieve Credit Card: /creditcard/retrieve
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Insert Customer: /customer/insert
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Update Customer: /creditcard/update
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Retrieve Customer: /creditcard/retrieve
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Place Order: /order/place
+[2019/06/08 13:14:29][CONFIG][currentConfigs]  [Billing][EP] Retrieve Order: /order/retrieve
+[2019/06/08 13:14:29][CONFIG][<init>]  Initializing connection pool...
+[2019/06/08 13:14:29][CONFIG][<init>]  Creating connection #1
+[2019/06/08 13:14:30][CONFIG][<init>]  Creating connection #2
+[2019/06/08 13:14:30][CONFIG][<init>]  Creating connection #3
+[2019/06/08 13:14:30][CONFIG][initConnectionPool]  Initializing connection pool...
+[2019/06/08 13:14:30][CONFIG][<init>]  Initializing connection pool...
+[2019/06/08 13:14:30][CONFIG][<init>]  Creating connection #1
+[2019/06/08 13:14:30][CONFIG][<init>]  Creating connection #2
+[2019/06/08 13:14:31][CONFIG][<init>]  Creating connection #3
+[2019/06/08 13:14:31][CONFIG][initConnectionPool]  [32mConnection pool initialized.[0m
+[2019/06/08 13:14:31][CONFIG][initThreadPool]  Initializing thread pool.
+[2019/06/08 13:14:31][INFO][CreateWorker]  Creating Worker id#0
+[2019/06/08 13:14:31][INFO][CreateWorker]  Creating Worker id#1
+[2019/06/08 13:14:31][INFO][CreateWorker]  Creating Worker id#2
+[2019/06/08 13:14:31][CONFIG][initThreadPool]  [32mInitializing thread pool.[0m
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:3999/api/g
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/08 13:14:31][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/08 13:14:32][CONFIG][initHTTPServer]  [32mHTTP server started.[0m
+[2019/06/08 13:14:32][CONFIG][initService]  [32mService initialized.[0m
+[2019/06/08 13:19:48][INFO][loginUserRequest]  Received request to Login user.
+[2019/06/08 13:19:48][INFO][loginUserRequest]  json txt: {"email":"random@notAuser.com","password":"Kfizzle1212!"}
+[2019/06/08 13:19:48][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:19:48][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:19:48][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:19:48][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:19:48][INFO][enqueue]  enqueue: ClientRequest{email='null', sessionID='null', transactionID='5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@488c5188, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:19:48][INFO][dequeue]  dequeue: ClientRequest{email='null', sessionID='null', transactionID='5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@488c5188, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:19:48][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='null', sessionID='null', transactionID='5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@488c5188, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:19:48][INFO][SendRequest]  Building client...
+[2019/06/08 13:19:48][INFO][SendRequest]  Building URI...
+[2019/06/08 13:19:48][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:19:48][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:19:48][INFO][SendRequest]  endpoint path: /login
+[2019/06/08 13:19:48][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3991/api/idm/login }
+[2019/06/08 13:19:48][INFO][SendRequest]  Starting invocation builder for /login...
+[2019/06/08 13:19:48][INFO][SendRequest]  Sending request...
+[2019/06/08 13:19:49][INFO][SendRequest]  Sent!
+[2019/06/08 13:19:49][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/login, status=200, reason=OK}}
+[2019/06/08 13:19:49][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba', null, null, '{"resultCode":14,"message":"User not found"}', 200)
+[2019/06/08 13:19:49][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:19:49][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:19:49][INFO][GetResponse]  email: null
+[2019/06/08 13:19:49][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:19:49][INFO][GetResponse]  transactionID: 5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba
+[2019/06/08 13:19:49][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba'
+[2019/06/08 13:19:49][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:19:49][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '5cf45fd19713bff589dc0c32dda51c89b9454827a5692263a1ebb7e36f6b90495b82f468f2ff91e78aeb86e34f311db570b798df92da1edbe03fecf1b3b3efba'
+[2019/06/08 13:19:49][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:20:16][INFO][registerUserRequest]  Received request to register user.
+[2019/06/08 13:20:16][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:20:16][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:20:16][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:20:16][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:20:16][INFO][enqueue]  enqueue: ClientRequest{email='null', sessionID='null', transactionID='0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4', request=RegisterUserRequestModel [Email: user@newuser.com, has password?: true, URI='http://127.0.0.1:3991/api/idm', endpoint='/register', method='null'}
+[2019/06/08 13:20:16][INFO][dequeue]  dequeue: ClientRequest{email='null', sessionID='null', transactionID='0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4', request=RegisterUserRequestModel [Email: user@newuser.com, has password?: true, URI='http://127.0.0.1:3991/api/idm', endpoint='/register', method='null'}
+[2019/06/08 13:20:16][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='null', sessionID='null', transactionID='0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4', request=RegisterUserRequestModel [Email: user@newuser.com, has password?: true, URI='http://127.0.0.1:3991/api/idm', endpoint='/register', method='null'}
+[2019/06/08 13:20:16][INFO][SendRequest]  Building client...
+[2019/06/08 13:20:16][INFO][SendRequest]  Building URI...
+[2019/06/08 13:20:16][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:20:16][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:20:16][INFO][SendRequest]  endpoint path: /register
+[2019/06/08 13:20:16][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3991/api/idm/register }
+[2019/06/08 13:20:16][INFO][SendRequest]  Starting invocation builder for /register...
+[2019/06/08 13:20:16][INFO][SendRequest]  Sending request...
+[2019/06/08 13:20:17][INFO][SendRequest]  Sent!
+[2019/06/08 13:20:17][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/register, status=200, reason=OK}}
+[2019/06/08 13:20:17][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4', null, null, '{"resultCode":110,"message":"User registered successfully."}', 200)
+[2019/06/08 13:20:17][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:20:17][INFO][GetResponse]  email: null
+[2019/06/08 13:20:17][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:20:17][INFO][GetResponse]  transactionID: 0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4
+[2019/06/08 13:20:17][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4'
+[2019/06/08 13:20:17][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:20:17][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:20:17][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '0c00260e34b7eef80a9d58d4ad6610bb0d64ba4b8ecaedd6d2c96ef9528005c6baf6284451858b53576ac365ee5fdf23d7e9069a6ed366d3a4ed23feeaebb8a4'
+[2019/06/08 13:20:17][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:20:39][INFO][loginUserRequest]  Received request to Login user.
+[2019/06/08 13:20:39][INFO][loginUserRequest]  json txt: {"email":"user@newuser.com","password":"1"}
+[2019/06/08 13:20:39][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:20:39][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:20:39][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:20:39][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:20:39][INFO][enqueue]  enqueue: ClientRequest{email='null', sessionID='null', transactionID='424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@73aaf273, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:39][INFO][dequeue]  dequeue: ClientRequest{email='null', sessionID='null', transactionID='424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@73aaf273, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:39][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='null', sessionID='null', transactionID='424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@73aaf273, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:39][INFO][SendRequest]  Building client...
+[2019/06/08 13:20:39][INFO][SendRequest]  Building URI...
+[2019/06/08 13:20:39][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:20:39][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:20:39][INFO][SendRequest]  endpoint path: /login
+[2019/06/08 13:20:39][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3991/api/idm/login }
+[2019/06/08 13:20:39][INFO][SendRequest]  Starting invocation builder for /login...
+[2019/06/08 13:20:39][INFO][SendRequest]  Sending request...
+[2019/06/08 13:20:39][INFO][SendRequest]  Sent!
+[2019/06/08 13:20:39][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/login, status=400, reason=Bad Request}}
+[2019/06/08 13:20:39][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6', null, null, '{"resultCode":-12,"message":"Password has invalid length."}', 400)
+[2019/06/08 13:20:39][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:20:39][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:20:39][INFO][GetResponse]  email: null
+[2019/06/08 13:20:39][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:20:39][INFO][GetResponse]  transactionID: 424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6
+[2019/06/08 13:20:39][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6'
+[2019/06/08 13:20:39][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:20:39][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '424a7d9c26a1e5cb552916f49128566aa4cb8108a875054cff9d8c01160f71b8a7d2f654d0fa2e4d8f2641d1d474164797c76bb19c8787b84cf416809df390c6'
+[2019/06/08 13:20:39][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:20:47][INFO][loginUserRequest]  Received request to Login user.
+[2019/06/08 13:20:47][INFO][loginUserRequest]  json txt: {"email":"user@newuser.com","password":"asdfasdfaaf"}
+[2019/06/08 13:20:47][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:20:47][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:20:47][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:20:47][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:20:47][INFO][enqueue]  enqueue: ClientRequest{email='null', sessionID='null', transactionID='6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@3f3ce410, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:47][INFO][dequeue]  dequeue: ClientRequest{email='null', sessionID='null', transactionID='6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@3f3ce410, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:47][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='null', sessionID='null', transactionID='6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@3f3ce410, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:47][INFO][SendRequest]  Building client...
+[2019/06/08 13:20:47][INFO][SendRequest]  Building URI...
+[2019/06/08 13:20:47][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:20:47][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:20:47][INFO][SendRequest]  endpoint path: /login
+[2019/06/08 13:20:47][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3991/api/idm/login }
+[2019/06/08 13:20:47][INFO][SendRequest]  Starting invocation builder for /login...
+[2019/06/08 13:20:47][INFO][SendRequest]  Sending request...
+[2019/06/08 13:20:47][INFO][SendRequest]  Sent!
+[2019/06/08 13:20:47][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/login, status=200, reason=OK}}
+[2019/06/08 13:20:47][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545', null, null, '{"resultCode":11,"message":"Passwords do not match."}', 200)
+[2019/06/08 13:20:47][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:20:47][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:20:47][INFO][GetResponse]  email: null
+[2019/06/08 13:20:47][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:20:47][INFO][GetResponse]  transactionID: 6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545
+[2019/06/08 13:20:47][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545'
+[2019/06/08 13:20:47][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:20:47][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '6052ad1779ab20f1cfcd5cbde690e7993919f92a9d4b16ad57700424e7d9664f9758d6d42e26aa3d9fa2bc82329978608c2e5e5c93e6526d61106858ae1ed545'
+[2019/06/08 13:20:47][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:20:58][INFO][loginUserRequest]  Received request to Login user.
+[2019/06/08 13:20:58][INFO][loginUserRequest]  json txt: {"email":"user@newuser.com","password":"Kfizzle1212!"}
+[2019/06/08 13:20:58][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:20:58][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:20:58][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:20:58][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:20:58][INFO][enqueue]  enqueue: ClientRequest{email='null', sessionID='null', transactionID='3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@dd51880, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:58][INFO][dequeue]  dequeue: ClientRequest{email='null', sessionID='null', transactionID='3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@dd51880, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:58][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='null', sessionID='null', transactionID='3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0', request=edu.uci.ics.khefner.service.api_gateway.models.idm.Login.LoginRequestModel@dd51880, URI='http://127.0.0.1:3991/api/idm', endpoint='/login', method='null'}
+[2019/06/08 13:20:58][INFO][SendRequest]  Building client...
+[2019/06/08 13:20:58][INFO][SendRequest]  Building URI...
+[2019/06/08 13:20:58][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:20:58][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:20:58][INFO][SendRequest]  endpoint path: /login
+[2019/06/08 13:20:58][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3991/api/idm/login }
+[2019/06/08 13:20:58][INFO][SendRequest]  Starting invocation builder for /login...
+[2019/06/08 13:20:58][INFO][SendRequest]  Sending request...
+[2019/06/08 13:20:58][INFO][SendRequest]  Sent!
+[2019/06/08 13:20:58][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/login, status=200, reason=OK}}
+[2019/06/08 13:20:58][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0', null, null, '{"resultCode":120,"message":"User logged in successfully.","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}', 200)
+[2019/06/08 13:20:58][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:20:59][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:20:59][INFO][GetResponse]  email: null
+[2019/06/08 13:20:59][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:20:59][INFO][GetResponse]  transactionID: 3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0
+[2019/06/08 13:20:59][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0'
+[2019/06/08 13:20:59][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:20:59][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '3a85e7a595c6f2096645f6bc5dcb40ea428699a1e371f068a9f10796c0a5022e5bc20568bb7e72ff3318c84563d588886ed2541ca9bc87ee848158d73c34f7d0'
+[2019/06/08 13:20:59][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:21:10][INFO][retrieveCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:21:10][INFO][VerifySession]  Building client...
+[2019/06/08 13:21:10][INFO][VerifySession]  Building URI...
+[2019/06/08 13:21:10][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:21:10][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:21:10][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:21:10][INFO][VerifySession]  Sending request...
+[2019/06/08 13:21:11][INFO][VerifySession]  Sent!
+[2019/06/08 13:21:11][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:21:11][INFO][retrieveCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:11][INFO][retrieveCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:21:11][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:21:11][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:21:11][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:21:11][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:21:11][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@bfcdfe, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:21:11][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@bfcdfe, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:21:11][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@bfcdfe, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:21:11][INFO][SendRequest]  Building client...
+[2019/06/08 13:21:11][INFO][SendRequest]  Building URI...
+[2019/06/08 13:21:11][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:21:11][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:21:11][INFO][SendRequest]  endpoint path: /cart/retrieve
+[2019/06/08 13:21:11][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/retrieve }
+[2019/06/08 13:21:11][INFO][SendRequest]  Starting invocation builder for /cart/retrieve...
+[2019/06/08 13:21:11][INFO][SendRequest]  Sending request...
+[2019/06/08 13:21:11][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:11][INFO][GetResponse]  email: null
+[2019/06/08 13:21:11][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:11][INFO][GetResponse]  transactionID: fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5
+[2019/06/08 13:21:11][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5'
+[2019/06/08 13:21:11][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:11][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:21:11][INFO][SendRequest]  Sent!
+[2019/06/08 13:21:11][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/retrieve, status=200, reason=OK}}
+[2019/06/08 13:21:11][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":312,"message":"Shopping item does not exist."}', 200)
+[2019/06/08 13:21:11][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:21:11][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:11][INFO][GetResponse]  email: null
+[2019/06/08 13:21:11][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:11][INFO][GetResponse]  transactionID: fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5
+[2019/06/08 13:21:11][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5'
+[2019/06/08 13:21:11][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:11][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'fa113896b0bf819d8b19a7017f9fdcb50b9bb75bb23b2db870e875f6a3b464b09140fe6f6c2db35ebab7d2b9da9150a156b67bc6d7a36ebd98db40ff03f5b4e5'
+[2019/06/08 13:21:11][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:21:30][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:21:30][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:21:30][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:21:30][INFO][VerifySession]  Building client...
+[2019/06/08 13:21:30][INFO][VerifySession]  Building URI...
+[2019/06/08 13:21:30][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:21:30][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:21:30][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:21:30][INFO][VerifySession]  Sending request...
+[2019/06/08 13:21:30][INFO][VerifySession]  Sent!
+[2019/06/08 13:21:30][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:21:30][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:30][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:21:30][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:30][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:30][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:30][INFO][SendRequest]  Building client...
+[2019/06/08 13:21:30][INFO][SendRequest]  Building URI...
+[2019/06/08 13:21:30][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:21:30][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:21:30][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:21:30][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=&limit=10&orderby=rating&title=love&direction=desc }
+[2019/06/08 13:21:30][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:21:30][INFO][SendRequest]  Sending request...
+[2019/06/08 13:21:31][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:31][INFO][GetResponse]  email: null
+[2019/06/08 13:21:31][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:31][INFO][GetResponse]  transactionID: fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9
+[2019/06/08 13:21:31][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9'
+[2019/06/08 13:21:31][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:31][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:21:31][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:31][INFO][GetResponse]  email: null
+[2019/06/08 13:21:31][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:31][INFO][GetResponse]  transactionID: fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9
+[2019/06/08 13:21:31][INFO][SendRequest]  Sent!
+[2019/06/08 13:21:31][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=&limit=10&orderby=rating&title=love&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:21:32][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9'
+[2019/06/08 13:21:32][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:32][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:21:32][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0451103","title":"Love Lessons","director":"Jon Stahl","year":2005,"rating":8.6,"numVotes":8},{"movieId":"tt0431092","title":"Goodnight, We Love You","director":"Gregg Barson","year":2004,"rating":8.1,"numVotes":72},{"movieId":"tt0419926","title":"Love Like Blood","director":"Steven Bozga","year":2004,"rating":8.1,"numVotes":8},{"movieId":"tt0322242","title":"Falling. In Love","director":"Gregory Doucette","year":2002,"rating":7.9,"numVotes":13},{"movieId":"tt0420974","title":"True Love","director":"Henry Barrial","year":2007,"rating":7.9,"numVotes":27},{"movieId":"tt0483578","title":"Love and Honor","director":"Yôji Yamada","year":2006,"rating":7.8,"numVotes":2699},{"movieId":"tt0425079","title":"Lovelorn","director":"Yavuz Turgul","year":2005,"rating":7.8,"numVotes":8079},{"movieId":"tt0453104","title":"I Love Pinochet","director":"Marcela Said","year":2001,"rating":7.7,"numVotes":52},{"movieId":"tt0496301","title":"For the Love of Dolly","director":"Tai Uhlmann","year":2006,"rating":7.6,"numVotes":59},{"movieId":"tt0481587","title":"Muskrat Lovely","director":"Amy Nicholson","year":2005,"rating":7.6,"numVotes":18}]}', 200)
+[2019/06/08 13:21:32][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:21:33][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:33][INFO][GetResponse]  email: null
+[2019/06/08 13:21:33][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:33][INFO][GetResponse]  transactionID: fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9
+[2019/06/08 13:21:33][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9'
+[2019/06/08 13:21:33][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:33][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'fa8cccfe85e2cdc40b7140d8d5f9d3ea4d4376025c26429088f54da787f70ef126fbda0eb7da5c357f69d36fd1336accba1952ed9ae7b97a9854e10907ab23d9'
+[2019/06/08 13:21:33][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:21:50][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:21:50][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:21:50][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:21:50][INFO][VerifySession]  Building client...
+[2019/06/08 13:21:50][INFO][VerifySession]  Building URI...
+[2019/06/08 13:21:50][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:21:50][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:21:50][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:21:50][INFO][VerifySession]  Sending request...
+[2019/06/08 13:21:50][INFO][VerifySession]  Sent!
+[2019/06/08 13:21:50][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:21:50][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:21:50][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:21:50][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:50][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:50][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:21:50][INFO][SendRequest]  Building client...
+[2019/06/08 13:21:50][INFO][SendRequest]  Building URI...
+[2019/06/08 13:21:50][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:21:50][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:21:50][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:21:50][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=10&year=&director=&genre=&limit=10&orderby=rating&title=love&direction=desc }
+[2019/06/08 13:21:50][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:21:50][INFO][SendRequest]  Sending request...
+[2019/06/08 13:21:50][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:50][INFO][GetResponse]  email: null
+[2019/06/08 13:21:50][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:50][INFO][GetResponse]  transactionID: b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd
+[2019/06/08 13:21:50][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd'
+[2019/06/08 13:21:50][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:50][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:21:51][INFO][SendRequest]  Sent!
+[2019/06/08 13:21:51][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=10&year=&director=&genre=&limit=10&orderby=rating&title=love&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:21:51][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0377085","title":"Love and Testosterone","director":"Stephen F. Dedalus","year":2003,"rating":7.5,"numVotes":54},{"movieId":"tt0433681","title":"A Lover for My Husband","director":"Brandon Finney","year":2003,"rating":7.4,"numVotes":11},{"movieId":"tt0453512","title":"Love and Fate","director":"Jonathan Walter","year":2003,"rating":7.2,"numVotes":5},{"movieId":"tt0332224","title":"The Lover","director":"Valeriy Todorovskiy","year":2002,"rating":7.2,"numVotes":457},{"movieId":"tt0455748","title":"The Samurai I Loved","director":"Mitsuo Kurotsuchi","year":2005,"rating":7.2,"numVotes":256},{"movieId":"tt0373081","title":"A Love of Blueness","director":"Jianqi Huo","year":2001,"rating":7.1,"numVotes":36},{"movieId":"tt0403867","title":"Barbecue: A Texas Love Story","director":"Chris Elley","year":2004,"rating":7.1,"numVotes":27},{"movieId":"tt0406528","title":"Love (Part One)","director":"Santiago Mitre","year":2005,"rating":7.1,"numVotes":195},{"movieId":"tt0483722","title":"Lovers, Liars and Lunatics","director":"Amber Benson","year":2006,"rating":7.1,"numVotes":139},{"movieId":"tt0390532","title":"Taj Mahal: A Monument of Love","director":"Robin Khosla","year":2003,"rating":7.1,"numVotes":47}]}', 200)
+[2019/06/08 13:21:51][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:21:51][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:21:51][INFO][GetResponse]  email: null
+[2019/06/08 13:21:51][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:21:51][INFO][GetResponse]  transactionID: b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd
+[2019/06/08 13:21:51][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd'
+[2019/06/08 13:21:51][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:21:51][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'b204b9dfc0d9e45a5c6c7cd5c7f557005f26e855af9e9ad87b74dac1f5832418f1652054aaf4cd8431ac0d81b3f61d08a2bbe2e4e11963dce2206c11b4b82cfd'
+[2019/06/08 13:21:51][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:22:01][INFO][getMovieRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:22:01][INFO][getMovieRequest]  Received request to get movie by id.
+[2019/06/08 13:22:01][INFO][getMovieRequest]  email: user@newuser.com
+[2019/06/08 13:22:01][INFO][VerifySession]  Building client...
+[2019/06/08 13:22:01][INFO][VerifySession]  Building URI...
+[2019/06/08 13:22:01][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:22:01][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:22:01][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:22:01][INFO][VerifySession]  Sending request...
+[2019/06/08 13:22:01][INFO][VerifySession]  Sent!
+[2019/06/08 13:22:01][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:22:01][INFO][getMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:01][INFO][getMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:22:01][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0377085', method='GET'}
+[2019/06/08 13:22:01][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0377085', method='GET'}
+[2019/06/08 13:22:01][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0377085', method='GET'}
+[2019/06/08 13:22:01][INFO][SendRequest]  Building client...
+[2019/06/08 13:22:01][INFO][SendRequest]  Building URI...
+[2019/06/08 13:22:01][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:22:01][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:22:01][INFO][SendRequest]  endpoint path: /get/tt0377085
+[2019/06/08 13:22:01][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/get/tt0377085 }
+[2019/06/08 13:22:01][INFO][SendRequest]  Starting invocation builder for /get/tt0377085...
+[2019/06/08 13:22:01][INFO][SendRequest]  Sending request...
+[2019/06/08 13:22:01][INFO][SendRequest]  Sent!
+[2019/06/08 13:22:01][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/get/tt0377085, status=200, reason=OK}}
+[2019/06/08 13:22:01][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movie":{"movieId":"tt0377085","title":"Love and Testosterone","director":"Stephen F. Dedalus","year":2003,"backdrop_path":null,"budget":0,"overview":null,"poster_path":null,"rating":7.5,"revenue":0,"numVotes":54,"hidden":false,"genres":[{"id":6,"name":"Comedy"},{"id":9,"name":"Drama"}],"stars":[{"id":"nm1415478","name":"Cory Elgin","birthYear":1982},{"id":"nm1415508","name":"Will Etling","birthYear":1982},{"id":"nm1416003","name":"Wes Kelm"},{"id":"nm1416810","name":"Holly Rollins","birthYear":1983},{"id":"nm1428064","name":"Alayha Aquarian"},{"id":"nm1428823","name":"Matt Kirby"},{"id":"nm1429273","name":"Altered Perception","birthYear":1982},{"id":"nm1429976","name":"John Nicklas"},{"id":"nm1813989","name":"Ryan Graff"},{"id":"nm4862652","name":"Stephen F. Dedalus"}]}}', 200)
+[2019/06/08 13:22:01][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:22:01][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:01][INFO][GetResponse]  email: null
+[2019/06/08 13:22:01][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:01][INFO][GetResponse]  transactionID: 65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67
+[2019/06/08 13:22:01][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67'
+[2019/06/08 13:22:01][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:01][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '65d396516f6a423871d9444fa704aa8a46c1cede5d0f401ecf2295e7f9d5350ceb7722316782b8646b912f88a675579dc7b0601cbbbfbe39f3353e5f4385ba67'
+[2019/06/08 13:22:02][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:22:12][INFO][insertToCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:22:12][INFO][VerifySession]  Building client...
+[2019/06/08 13:22:12][INFO][VerifySession]  Building URI...
+[2019/06/08 13:22:12][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:22:12][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:22:12][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:22:12][INFO][VerifySession]  Sending request...
+[2019/06/08 13:22:12][INFO][VerifySession]  Sent!
+[2019/06/08 13:22:12][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:22:12][INFO][insertToCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:12][INFO][insertToCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:22:12][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:22:12][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:22:12][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:22:12][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:22:12][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@14ed2ad3, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:12][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@14ed2ad3, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:12][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@14ed2ad3, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:12][INFO][SendRequest]  Building client...
+[2019/06/08 13:22:12][INFO][SendRequest]  Building URI...
+[2019/06/08 13:22:12][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:22:12][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:22:12][INFO][SendRequest]  endpoint path: /cart/insert
+[2019/06/08 13:22:12][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/insert }
+[2019/06/08 13:22:12][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:12][INFO][SendRequest]  Starting invocation builder for /cart/insert...
+[2019/06/08 13:22:12][INFO][GetResponse]  email: null
+[2019/06/08 13:22:12][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:12][INFO][SendRequest]  Sending request...
+[2019/06/08 13:22:12][INFO][GetResponse]  transactionID: 3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1
+[2019/06/08 13:22:12][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1'
+[2019/06/08 13:22:12][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:12][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:22:12][INFO][SendRequest]  Sent!
+[2019/06/08 13:22:12][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/insert, status=200, reason=OK}}
+[2019/06/08 13:22:12][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3100,"message":"Shopping cart item inserted successfully."}', 200)
+[2019/06/08 13:22:12][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:22:12][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:12][INFO][GetResponse]  email: null
+[2019/06/08 13:22:12][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:12][INFO][GetResponse]  transactionID: 3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1
+[2019/06/08 13:22:12][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1'
+[2019/06/08 13:22:12][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:13][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '3e56f4c4bf16f34b10fffa5fb22aea6930d6e6f1cf27f1b3b1c71a6c14aa65c9300db67b2c9f3041d761a54829b500aa43a2e6f6dd7812690980958b5cc804b1'
+[2019/06/08 13:22:13][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:22:25][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:22:25][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:22:25][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:22:25][INFO][VerifySession]  Building client...
+[2019/06/08 13:22:25][INFO][VerifySession]  Building URI...
+[2019/06/08 13:22:25][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:22:25][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:22:25][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:22:25][INFO][VerifySession]  Sending request...
+[2019/06/08 13:22:25][INFO][VerifySession]  Sent!
+[2019/06/08 13:22:25][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:22:25][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:25][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:22:25][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:22:25][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:22:25][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:22:25][INFO][SendRequest]  Building client...
+[2019/06/08 13:22:25][INFO][SendRequest]  Building URI...
+[2019/06/08 13:22:25][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:22:25][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:22:25][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:22:25][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc }
+[2019/06/08 13:22:25][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:22:25][INFO][SendRequest]  Sending request...
+[2019/06/08 13:22:25][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:25][INFO][GetResponse]  email: null
+[2019/06/08 13:22:25][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:25][INFO][GetResponse]  transactionID: 9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415
+[2019/06/08 13:22:25][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415'
+[2019/06/08 13:22:25][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:25][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:22:25][INFO][SendRequest]  Sent!
+[2019/06/08 13:22:25][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:22:25][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0395642","title":"Loma Lynda: Episode II","director":"Jason Bognacki","year":2004,"rating":9.7,"numVotes":9},{"movieId":"tt0395445","title":"American Generator","director":"Michael Marco","year":2003,"rating":9.4,"numVotes":8},{"movieId":"tt0458357","title":"Drip","director":"Nick Lanzilotta","year":2005,"rating":9.4,"numVotes":5},{"movieId":"tt0357979","title":"Old Coaches","director":"Troy McGatlin","year":2002,"rating":9.3,"numVotes":16},{"movieId":"tt0359991","title":"The Sinking Ship","director":"James Israel","year":2003,"rating":9.3,"numVotes":9},{"movieId":"tt0328677","title":"Yesterday Upon the Stair","director":"John Milton Branton","year":2002,"rating":9.3,"numVotes":7},{"movieId":"tt0315354","title":"Callback","director":"Christopher Glatis","year":2005,"rating":9.2,"numVotes":17},{"movieId":"tt0406282","title":"Bubbles","director":"Kasper Syhler","year":2011,"rating":9.1,"numVotes":16},{"movieId":"tt0482639","title":"The Winter Sun Is a Lie","director":"Nassim Abassi","year":2005,"rating":9.1,"numVotes":7},{"movieId":"tt0395198","title":"Louie the Moon","director":"Catherine Owens","year":2004,"rating":9.0,"numVotes":6}]}', 200)
+[2019/06/08 13:22:26][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:26][INFO][GetResponse]  email: null
+[2019/06/08 13:22:26][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:26][INFO][GetResponse]  transactionID: 9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415
+[2019/06/08 13:22:26][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:22:26][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415'
+[2019/06/08 13:22:26][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:26][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '9d65aa326c24d5e1fb2eebc680b08538e0ec19ffda7143a66972046934662c582f447b6979680bb50ccdbf052eed324e6b56edf26f9876457ff47826288e1415'
+[2019/06/08 13:22:26][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:22:40][INFO][getMovieRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:22:40][INFO][getMovieRequest]  Received request to get movie by id.
+[2019/06/08 13:22:40][INFO][getMovieRequest]  email: user@newuser.com
+[2019/06/08 13:22:40][INFO][VerifySession]  Building client...
+[2019/06/08 13:22:40][INFO][VerifySession]  Building URI...
+[2019/06/08 13:22:40][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:22:40][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:22:40][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:22:40][INFO][VerifySession]  Sending request...
+[2019/06/08 13:22:40][INFO][VerifySession]  Sent!
+[2019/06/08 13:22:40][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:22:40][INFO][getMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:40][INFO][getMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:22:40][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0395445', method='GET'}
+[2019/06/08 13:22:40][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0395445', method='GET'}
+[2019/06/08 13:22:40][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0395445', method='GET'}
+[2019/06/08 13:22:40][INFO][SendRequest]  Building client...
+[2019/06/08 13:22:40][INFO][SendRequest]  Building URI...
+[2019/06/08 13:22:40][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:22:40][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:22:40][INFO][SendRequest]  endpoint path: /get/tt0395445
+[2019/06/08 13:22:40][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/get/tt0395445 }
+[2019/06/08 13:22:40][INFO][SendRequest]  Starting invocation builder for /get/tt0395445...
+[2019/06/08 13:22:40][INFO][SendRequest]  Sending request...
+[2019/06/08 13:22:41][INFO][SendRequest]  Sent!
+[2019/06/08 13:22:41][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/get/tt0395445, status=200, reason=OK}}
+[2019/06/08 13:22:41][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movie":{"movieId":"tt0395445","title":"American Generator","director":"Michael Marco","year":2003,"backdrop_path":null,"budget":0,"overview":null,"poster_path":null,"rating":9.4,"revenue":0,"numVotes":8,"hidden":false,"genres":[{"id":9,"name":"Drama"}],"stars":[{"id":"nm0420385","name":"Marc Jeffreys"},{"id":"nm0542308","name":"Meagan Mangum"},{"id":"nm0766418","name":"Brian Satterwhite","birthYear":1974},{"id":"nm0942143","name":"Vincent Wrenn"},{"id":"nm1268783","name":"Dane Hereford"},{"id":"nm1324995","name":"Michael Marco"},{"id":"nm1439340","name":"Scott Haro"},{"id":"nm1527072","name":"Shannon Burgan"},{"id":"nm2389330","name":"Robin Marco"},{"id":"nm2404742","name":"Kim Burgan"}]}}', 200)
+[2019/06/08 13:22:41][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:22:41][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:41][INFO][GetResponse]  email: null
+[2019/06/08 13:22:41][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:41][INFO][GetResponse]  transactionID: f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8
+[2019/06/08 13:22:41][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8'
+[2019/06/08 13:22:41][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:41][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'f8297cc2bebdb25d1b074144fce00c90f3897d7480323fd9321df671766e10f4b286070afc930d3f6c0b0a1d812fda94ec077da1aed0db7e3d32f163c2402ee8'
+[2019/06/08 13:22:41][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:22:45][INFO][insertToCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:22:45][INFO][VerifySession]  Building client...
+[2019/06/08 13:22:45][INFO][VerifySession]  Building URI...
+[2019/06/08 13:22:45][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:22:45][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:22:45][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:22:45][INFO][VerifySession]  Sending request...
+[2019/06/08 13:22:45][INFO][VerifySession]  Sent!
+[2019/06/08 13:22:45][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:22:45][INFO][insertToCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:22:45][INFO][insertToCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:22:45][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:22:45][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:22:45][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:22:45][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:22:45][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@37dc866b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:45][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@37dc866b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:45][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@37dc866b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:22:45][INFO][SendRequest]  Building client...
+[2019/06/08 13:22:45][INFO][SendRequest]  Building URI...
+[2019/06/08 13:22:45][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:22:45][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:22:45][INFO][SendRequest]  endpoint path: /cart/insert
+[2019/06/08 13:22:45][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/insert }
+[2019/06/08 13:22:45][INFO][SendRequest]  Starting invocation builder for /cart/insert...
+[2019/06/08 13:22:45][INFO][SendRequest]  Sending request...
+[2019/06/08 13:22:45][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:45][INFO][GetResponse]  email: null
+[2019/06/08 13:22:45][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:45][INFO][GetResponse]  transactionID: 8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041
+[2019/06/08 13:22:45][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041'
+[2019/06/08 13:22:45][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:45][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:22:45][INFO][SendRequest]  Sent!
+[2019/06/08 13:22:45][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/insert, status=200, reason=OK}}
+[2019/06/08 13:22:45][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3100,"message":"Shopping cart item inserted successfully."}', 200)
+[2019/06/08 13:22:46][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:22:46][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:22:46][INFO][GetResponse]  email: null
+[2019/06/08 13:22:46][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:22:46][INFO][GetResponse]  transactionID: 8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041
+[2019/06/08 13:22:46][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041'
+[2019/06/08 13:22:46][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:22:46][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '8dbd79f4d04728908d6132e0fdd9e13c58c5086764e89e4fcdfa9c66be710fe843787c2f7f7e2ac8b45b215c24a01ebb2415bcf48079146aea9f2ef900a4e041'
+[2019/06/08 13:22:46][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:06][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:23:06][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:23:06][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:06][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:06][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:06][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:06][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:06][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:06][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:06][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:06][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:06][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:06][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:06][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:06][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:06][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:06][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:06][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:06][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:06][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:06][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:23:06][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc }
+[2019/06/08 13:23:06][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:23:06][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:06][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:06][INFO][GetResponse]  email: null
+[2019/06/08 13:23:06][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:06][INFO][GetResponse]  transactionID: 0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6
+[2019/06/08 13:23:06][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6'
+[2019/06/08 13:23:06][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:06][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:06][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:06][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=0&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:23:06][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:06][INFO][GetResponse]  email: null
+[2019/06/08 13:23:06][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:06][INFO][GetResponse]  transactionID: 0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6
+[2019/06/08 13:23:06][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0395642","title":"Loma Lynda: Episode II","director":"Jason Bognacki","year":2004,"rating":9.7,"numVotes":9},{"movieId":"tt0395445","title":"American Generator","director":"Michael Marco","year":2003,"rating":9.4,"numVotes":8},{"movieId":"tt0458357","title":"Drip","director":"Nick Lanzilotta","year":2005,"rating":9.4,"numVotes":5},{"movieId":"tt0357979","title":"Old Coaches","director":"Troy McGatlin","year":2002,"rating":9.3,"numVotes":16},{"movieId":"tt0359991","title":"The Sinking Ship","director":"James Israel","year":2003,"rating":9.3,"numVotes":9},{"movieId":"tt0328677","title":"Yesterday Upon the Stair","director":"John Milton Branton","year":2002,"rating":9.3,"numVotes":7},{"movieId":"tt0315354","title":"Callback","director":"Christopher Glatis","year":2005,"rating":9.2,"numVotes":17},{"movieId":"tt0406282","title":"Bubbles","director":"Kasper Syhler","year":2011,"rating":9.1,"numVotes":16},{"movieId":"tt0482639","title":"The Winter Sun Is a Lie","director":"Nassim Abassi","year":2005,"rating":9.1,"numVotes":7},{"movieId":"tt0395198","title":"Louie the Moon","director":"Catherine Owens","year":2004,"rating":9.0,"numVotes":6}]}', 200)
+[2019/06/08 13:23:06][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:07][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6'
+[2019/06/08 13:23:07][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:07][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '0125b4d573a8a8c15b10ece053846f7b3e7d3a7e96a67431ba545e2109bdd5661f0b775e7e2af971dc556406ff479c06a20ee79dda410b3ad1eaf26bb8941cf6'
+[2019/06/08 13:23:07][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:08][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:23:08][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:23:08][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:08][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:08][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:08][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:08][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:08][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:08][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:08][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:08][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:08][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:08][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:08][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:08][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:08][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:08][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:08][INFO][GetResponse]  email: null
+[2019/06/08 13:23:08][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:08][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:08][INFO][GetResponse]  transactionID: 0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870
+[2019/06/08 13:23:08][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870'
+[2019/06/08 13:23:08][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:08][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:08][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:08][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:23:08][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=10&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc }
+[2019/06/08 13:23:08][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:23:08][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:08][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:08][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:08][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:08][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=10&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:23:09][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0254448","title":"Making Metamorphosis","director":"Christopher E. Brown","year":2001,"rating":9.0,"numVotes":7},{"movieId":"tt0390256","title":"Mere Acquaintance","director":"James M. Johnston","year":2003,"rating":9.0,"numVotes":7},{"movieId":"tt0327582","title":"The Cloud of Unknowing","director":"Richard Sylvarnes","year":2002,"rating":9.0,"numVotes":11},{"movieId":"tt0488935","title":"Addio notte bianca","director":"Eddy Caminiti","year":2005,"rating":8.9,"numVotes":35},{"movieId":"tt0367495","title":"Anbe Sivam","director":"Sundar C.","year":2003,"rating":8.9,"numVotes":9957},{"movieId":"tt0425135","title":"Integration","director":"Angela Roh","year":2002,"rating":8.9,"numVotes":14},{"movieId":"tt0486985","title":"Promise Me This","director":"Victor Jones","year":2005,"rating":8.9,"numVotes":14},{"movieId":"tt0435757","title":"Tears of a Clown","director":"Tony Spires","year":2005,"rating":8.9,"numVotes":39},{"movieId":"tt0372450","title":"A Normal Life","director":"Dewey Moss","year":2003,"rating":8.8,"numVotes":11},{"movieId":"tt0484383","title":"Catching the Chameleon","director":"Geoff P. Browne","year":2005,"rating":8.8,"numVotes":5}]}', 200)
+[2019/06/08 13:23:09][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:09][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:09][INFO][GetResponse]  email: null
+[2019/06/08 13:23:09][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:09][INFO][GetResponse]  transactionID: 0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870
+[2019/06/08 13:23:09][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870'
+[2019/06/08 13:23:09][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:09][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '0ffb1017d6e2532771f84655ff1cec8ebee33d6df82256e4c7cfd3d08677c2ce1ff99e1c643bb8b61c96ba6779db2002651577822175317a6ee6772bc5ea9870'
+[2019/06/08 13:23:09][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:09][INFO][searchMovieRequest]  received request to get a movie
+[2019/06/08 13:23:09][INFO][searchMovieRequest]  email: user@newuser.com
+[2019/06/08 13:23:09][INFO][searchMovieRequest]  sessionID: ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71
+[2019/06/08 13:23:09][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:09][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:09][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:09][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:09][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:09][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:10][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:10][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:10][INFO][searchMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:10][INFO][searchMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:10][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:10][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:10][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/search', method='GET'}
+[2019/06/08 13:23:10][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:10][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:10][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:10][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:10][INFO][SendRequest]  endpoint path: /search
+[2019/06/08 13:23:10][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/search?offset=20&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc }
+[2019/06/08 13:23:10][INFO][SendRequest]  Starting invocation builder for /search...
+[2019/06/08 13:23:10][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:10][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:10][INFO][GetResponse]  email: null
+[2019/06/08 13:23:10][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:10][INFO][GetResponse]  transactionID: 7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6
+[2019/06/08 13:23:10][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6'
+[2019/06/08 13:23:10][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:10][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:10][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:10][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/search?offset=20&year=&director=&genre=drama&limit=10&orderby=rating&title=&direction=desc, status=200, reason=OK}}
+[2019/06/08 13:23:10][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movies":[{"movieId":"tt0365240","title":"For Me","director":"Luke Hamon","year":2001,"rating":8.8,"numVotes":5},{"movieId":"tt0439217","title":"Indocumentados","director":"Leonardo Ricagni","year":2004,"rating":8.8,"numVotes":9},{"movieId":"tt0311473","title":"Mainly Etc.","director":"John Jansen","year":2001,"rating":8.8,"numVotes":25},{"movieId":"tt0307618","title":"Until Morning","director":"Roger Nehls","year":2002,"rating":8.8,"numVotes":16},{"movieId":"tt0308186","title":"Dreaming in Black and White","director":"Joseph G. Eckardt","year":2002,"rating":8.7,"numVotes":10},{"movieId":"tt0356643","title":"Ghosts of Genius","director":"Shaina Fewell","year":2003,"rating":8.7,"numVotes":9},{"movieId":"tt0470859","title":"Melody of Space","director":"Gusejn Mekhtiyev","year":2004,"rating":8.7,"numVotes":7},{"movieId":"tt0446792","title":"Surviving in L.A.","director":"Abbi Lake ONeill","year":2017,"rating":8.7,"numVotes":12},{"movieId":"tt0371392","title":"Watermark","director":"Georgina Willis","year":2003,"rating":8.7,"numVotes":1891},{"movieId":"tt0331079","title":"West Bank Brooklyn","director":"Ghazi Albuliwi","year":2002,"rating":8.7,"numVotes":23}]}', 200)
+[2019/06/08 13:23:10][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:10][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:10][INFO][GetResponse]  email: null
+[2019/06/08 13:23:10][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:10][INFO][GetResponse]  transactionID: 7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6
+[2019/06/08 13:23:10][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6'
+[2019/06/08 13:23:10][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:10][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '7e9f8f35b39a25959a275b687648ab64af6bc75b624efdcb9280862fad602601b46c75358958ac783bcc23c3c3c7c9dd3f83d45550d2c4f6efba99448d898da6'
+[2019/06/08 13:23:10][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:26][INFO][getMovieRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:23:26][INFO][getMovieRequest]  Received request to get movie by id.
+[2019/06/08 13:23:26][INFO][getMovieRequest]  email: user@newuser.com
+[2019/06/08 13:23:26][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:26][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:26][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:26][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:26][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:26][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:26][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:26][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:26][INFO][getMovieRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:26][INFO][getMovieRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:26][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0311473', method='GET'}
+[2019/06/08 13:23:26][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0311473', method='GET'}
+[2019/06/08 13:23:26][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189', request=null, URI='http://127.0.0.1:3992/api/movies', endpoint='/get/tt0311473', method='GET'}
+[2019/06/08 13:23:26][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:26][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:26][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:26][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:26][INFO][SendRequest]  endpoint path: /get/tt0311473
+[2019/06/08 13:23:26][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3992/api/movies/get/tt0311473 }
+[2019/06/08 13:23:26][INFO][SendRequest]  Starting invocation builder for /get/tt0311473...
+[2019/06/08 13:23:26][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:26][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:26][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=GET, uri=http://127.0.0.1:3992/api/movies/get/tt0311473, status=200, reason=OK}}
+[2019/06/08 13:23:26][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":210,"message":"Found movies with search parameters.","movie":{"movieId":"tt0311473","title":"Mainly Etc.","director":"John Jansen","year":2001,"backdrop_path":null,"budget":0,"overview":null,"poster_path":null,"rating":8.8,"revenue":0,"numVotes":25,"hidden":false,"genres":[{"id":9,"name":"Drama"}],"stars":[{"id":"nm1121665","name":"Valerie Allen"},{"id":"nm1140455","name":"Jessica Scott"},{"id":"nm1141520","name":"John Hargrove"},{"id":"nm1141653","name":"John Jansen"},{"id":"nm1142208","name":"Nicolae Muntean"},{"id":"nm1142336","name":"Mark Paniagua"},{"id":"nm1143464","name":"Scott Manelis"},{"id":"nm1143583","name":"Ric Silva"},{"id":"nm1143826","name":"Carrie Rogers"},{"id":"nm1144197","name":"Nick Katakis"}]}}', 200)
+[2019/06/08 13:23:27][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:27][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:27][INFO][GetResponse]  email: null
+[2019/06/08 13:23:27][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:27][INFO][GetResponse]  transactionID: 04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189
+[2019/06/08 13:23:27][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189'
+[2019/06/08 13:23:27][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:27][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '04755274226d7a8014de8e31dfb441458a0c9aa9e3c9cba21f275b8b193fbc48c4170d8bf9a29481fe086f4c8a880e6a4c79a12ecf2deacd358d505330c31189'
+[2019/06/08 13:23:27][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:30][INFO][insertToCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:23:30][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:30][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:30][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:30][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:30][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:30][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:31][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:31][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:31][INFO][insertToCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:31][INFO][insertToCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:31][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:23:31][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:23:31][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:23:31][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:23:31][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@541e0ccc, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:23:31][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@541e0ccc, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:23:31][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@541e0ccc, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/insert', method='null'}
+[2019/06/08 13:23:31][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:31][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:31][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:31][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:31][INFO][SendRequest]  endpoint path: /cart/insert
+[2019/06/08 13:23:31][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/insert }
+[2019/06/08 13:23:31][INFO][SendRequest]  Starting invocation builder for /cart/insert...
+[2019/06/08 13:23:31][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:31][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:31][INFO][GetResponse]  email: null
+[2019/06/08 13:23:31][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:31][INFO][GetResponse]  transactionID: f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389
+[2019/06/08 13:23:31][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389'
+[2019/06/08 13:23:31][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:31][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:31][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:31][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/insert, status=200, reason=OK}}
+[2019/06/08 13:23:31][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3100,"message":"Shopping cart item inserted successfully."}', 200)
+[2019/06/08 13:23:31][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:31][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:31][INFO][GetResponse]  email: null
+[2019/06/08 13:23:31][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:31][INFO][GetResponse]  transactionID: f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389
+[2019/06/08 13:23:31][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389'
+[2019/06/08 13:23:31][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:31][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'f9d1fc18eafd9833cc93a106236bc7ec39a097af54bc667d36e12fd2dfa68366be1afc3f8abee7e43bdbb6ed06e77d9e6992f810df6d6089a798a19f2a422389'
+[2019/06/08 13:23:31][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:36][INFO][retrieveCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:23:36][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:36][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:36][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:36][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:36][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:36][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:36][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:36][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:36][INFO][retrieveCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:36][INFO][retrieveCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:36][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:23:36][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:23:36][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:23:36][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:23:36][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@19fdfd55, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:23:36][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@19fdfd55, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:23:36][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@19fdfd55, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:23:36][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:36][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:36][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:36][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:36][INFO][SendRequest]  endpoint path: /cart/retrieve
+[2019/06/08 13:23:36][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/retrieve }
+[2019/06/08 13:23:36][INFO][SendRequest]  Starting invocation builder for /cart/retrieve...
+[2019/06/08 13:23:36][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:36][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:36][INFO][GetResponse]  email: null
+[2019/06/08 13:23:36][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:36][INFO][GetResponse]  transactionID: 2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8
+[2019/06/08 13:23:36][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8'
+[2019/06/08 13:23:36][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:36][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:36][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:36][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/retrieve, status=200, reason=OK}}
+[2019/06/08 13:23:37][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3130,"message":"Shopping cart retrieved successfully.","items":[{"email":"user@newuser.com","movieId":"tt0311473","quantity":3},{"email":"user@newuser.com","movieId":"tt0377085","quantity":1},{"email":"user@newuser.com","movieId":"tt0395445","quantity":2}]}', 200)
+[2019/06/08 13:23:37][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:37][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:37][INFO][GetResponse]  email: null
+[2019/06/08 13:23:37][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:37][INFO][GetResponse]  transactionID: 2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8
+[2019/06/08 13:23:37][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8'
+[2019/06/08 13:23:37][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:37][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '2931f619ba1ee6106639c0d37252bf7a8346ad4e64f401589c72953d32ec89c8affaac0f9f20ed923ace80e267b07642b6fcca6761aca73e26b034b5fcb613f8'
+[2019/06/08 13:23:37][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:47][INFO][deleteCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:23:47][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:47][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:47][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:47][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:47][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:47][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:47][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:47][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:47][INFO][deleteCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:47][INFO][deleteCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:47][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:23:47][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:23:47][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:23:47][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:23:47][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel2@5b645f45, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/delete', method='null'}
+[2019/06/08 13:23:47][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel2@5b645f45, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/delete', method='null'}
+[2019/06/08 13:23:47][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel2@5b645f45, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/delete', method='null'}
+[2019/06/08 13:23:47][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:47][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:47][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:47][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:47][INFO][SendRequest]  endpoint path: /cart/delete
+[2019/06/08 13:23:47][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/delete }
+[2019/06/08 13:23:47][INFO][SendRequest]  Starting invocation builder for /cart/delete...
+[2019/06/08 13:23:47][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:47][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:47][INFO][GetResponse]  email: null
+[2019/06/08 13:23:47][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:47][INFO][GetResponse]  transactionID: 6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef
+[2019/06/08 13:23:47][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef'
+[2019/06/08 13:23:47][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:47][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:47][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:47][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/delete, status=200, reason=OK}}
+[2019/06/08 13:23:47][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3120,"message":"Shopping cart item deleted successfully."}', 200)
+[2019/06/08 13:23:47][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:47][INFO][GetResponse]  email: null
+[2019/06/08 13:23:47][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:47][INFO][GetResponse]  transactionID: 6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef
+[2019/06/08 13:23:47][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:48][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef'
+[2019/06/08 13:23:48][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:48][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '6de0b8854f9873f85877ad3c31272734e6a51c5450eb1d88d52efa4bbd919f64fe4b3ccbcf46de0dc8246cfe6dbf54fb332c07d0fe0921edd50cf99eb69c97ef'
+[2019/06/08 13:23:48][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:23:58][INFO][updateCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:23:58][INFO][VerifySession]  Building client...
+[2019/06/08 13:23:58][INFO][VerifySession]  Building URI...
+[2019/06/08 13:23:58][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:23:58][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:23:58][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:23:58][INFO][VerifySession]  Sending request...
+[2019/06/08 13:23:58][INFO][VerifySession]  Sent!
+[2019/06/08 13:23:58][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:23:58][INFO][updateCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:23:58][INFO][updateCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:23:58][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:23:58][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:23:58][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:23:58][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:23:58][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@3afde57f, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/update', method='null'}
+[2019/06/08 13:23:58][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@3afde57f, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/update', method='null'}
+[2019/06/08 13:23:58][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel@3afde57f, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/update', method='null'}
+[2019/06/08 13:23:58][INFO][SendRequest]  Building client...
+[2019/06/08 13:23:58][INFO][SendRequest]  Building URI...
+[2019/06/08 13:23:58][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:23:58][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:23:58][INFO][SendRequest]  endpoint path: /cart/update
+[2019/06/08 13:23:58][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/update }
+[2019/06/08 13:23:58][INFO][SendRequest]  Starting invocation builder for /cart/update...
+[2019/06/08 13:23:58][INFO][SendRequest]  Sending request...
+[2019/06/08 13:23:58][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:58][INFO][GetResponse]  email: null
+[2019/06/08 13:23:58][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:58][INFO][GetResponse]  transactionID: 1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26
+[2019/06/08 13:23:58][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26'
+[2019/06/08 13:23:58][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:58][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:23:58][INFO][SendRequest]  Sent!
+[2019/06/08 13:23:58][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/update, status=200, reason=OK}}
+[2019/06/08 13:23:59][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3110,"message":"Shopping cart item updated successfully."}', 200)
+[2019/06/08 13:23:59][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:23:59][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:23:59][INFO][GetResponse]  email: null
+[2019/06/08 13:23:59][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:23:59][INFO][GetResponse]  transactionID: 1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26
+[2019/06/08 13:23:59][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26'
+[2019/06/08 13:23:59][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:23:59][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '1351b75c6effb08f3a0abacd0a1c8cbed8f914f87b686a164f9a54fd43a0387664450eed2aa9a207d8b142795686dbb674ff3b2d9707e74e0dd44203468d7c26'
+[2019/06/08 13:23:59][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:24:07][INFO][insertCustomerRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:24:07][INFO][VerifySession]  Building client...
+[2019/06/08 13:24:07][INFO][VerifySession]  Building URI...
+[2019/06/08 13:24:07][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:24:07][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:24:07][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:24:07][INFO][VerifySession]  Sending request...
+[2019/06/08 13:24:08][INFO][VerifySession]  Sent!
+[2019/06/08 13:24:08][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:24:08][INFO][insertCustomerRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:08][INFO][insertCustomerRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:24:08][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:24:08][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:24:08][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:24:08][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:24:08][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Customer.CustomerRequestModel@4d6ed737, URI='http://127.0.0.1:3993/api/billing', endpoint='/customer/insert', method='null'}
+[2019/06/08 13:24:08][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Customer.CustomerRequestModel@4d6ed737, URI='http://127.0.0.1:3993/api/billing', endpoint='/customer/insert', method='null'}
+[2019/06/08 13:24:08][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Customer.CustomerRequestModel@4d6ed737, URI='http://127.0.0.1:3993/api/billing', endpoint='/customer/insert', method='null'}
+[2019/06/08 13:24:08][INFO][SendRequest]  Building client...
+[2019/06/08 13:24:08][INFO][SendRequest]  Building URI...
+[2019/06/08 13:24:08][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:24:08][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:24:08][INFO][SendRequest]  endpoint path: /customer/insert
+[2019/06/08 13:24:08][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/customer/insert }
+[2019/06/08 13:24:08][INFO][SendRequest]  Starting invocation builder for /customer/insert...
+[2019/06/08 13:24:08][INFO][SendRequest]  Sending request...
+[2019/06/08 13:24:08][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:08][INFO][GetResponse]  email: null
+[2019/06/08 13:24:08][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:08][INFO][GetResponse]  transactionID: 50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59
+[2019/06/08 13:24:08][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59'
+[2019/06/08 13:24:08][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:08][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:08][INFO][SendRequest]  Sent!
+[2019/06/08 13:24:08][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/customer/insert, status=200, reason=OK}}
+[2019/06/08 13:24:08][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3300,"message":"Customer inserted successfully."}', 200)
+[2019/06/08 13:24:08][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:24:08][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:08][INFO][GetResponse]  email: null
+[2019/06/08 13:24:08][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:08][INFO][GetResponse]  transactionID: 50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59
+[2019/06/08 13:24:08][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59'
+[2019/06/08 13:24:08][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:09][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '50a1289a05e259b0698bf5f3d4065ebea9907c54268fa3c0b567f3ae4467e6d2c5ca0fa189b9fbfe84ac8b271125c62340e0e5e9687c4889bbc241a4d3ca6f59'
+[2019/06/08 13:24:09][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:24:12][INFO][placeOrderRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:24:12][INFO][VerifySession]  Building client...
+[2019/06/08 13:24:12][INFO][VerifySession]  Building URI...
+[2019/06/08 13:24:12][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:24:12][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:24:12][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:24:12][INFO][VerifySession]  Sending request...
+[2019/06/08 13:24:12][INFO][VerifySession]  Sent!
+[2019/06/08 13:24:12][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:24:12][INFO][placeOrderRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:12][INFO][placeOrderRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:24:12][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:24:12][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:24:12][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:24:12][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:24:12][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@32d158f8, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/place', method='null'}
+[2019/06/08 13:24:12][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@32d158f8, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/place', method='null'}
+[2019/06/08 13:24:12][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@32d158f8, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/place', method='null'}
+[2019/06/08 13:24:12][INFO][SendRequest]  Building client...
+[2019/06/08 13:24:12][INFO][SendRequest]  Building URI...
+[2019/06/08 13:24:12][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:24:12][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:24:12][INFO][SendRequest]  endpoint path: /order/place
+[2019/06/08 13:24:12][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/order/place }
+[2019/06/08 13:24:12][INFO][SendRequest]  Starting invocation builder for /order/place...
+[2019/06/08 13:24:12][INFO][SendRequest]  Sending request...
+[2019/06/08 13:24:12][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:12][INFO][GetResponse]  email: null
+[2019/06/08 13:24:12][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:12][INFO][GetResponse]  transactionID: 5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993
+[2019/06/08 13:24:12][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:13][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:13][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:13][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:13][INFO][GetResponse]  email: null
+[2019/06/08 13:24:13][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:13][INFO][GetResponse]  transactionID: 5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993
+[2019/06/08 13:24:13][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:13][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:13][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:14][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:14][INFO][GetResponse]  email: null
+[2019/06/08 13:24:14][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:14][INFO][GetResponse]  transactionID: 5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993
+[2019/06/08 13:24:14][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:14][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:14][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:15][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:15][INFO][GetResponse]  email: null
+[2019/06/08 13:24:15][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:15][INFO][GetResponse]  transactionID: 5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993
+[2019/06/08 13:24:15][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:15][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:15][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:15][INFO][SendRequest]  Sent!
+[2019/06/08 13:24:15][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/order/place, status=200, reason=OK}}
+[2019/06/08 13:24:15][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3400,"message":"Order placed successfully.","redirectURL":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9UD196309T8618836","token":"EC-9UD196309T8618836"}', 200)
+[2019/06/08 13:24:15][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:15][INFO][GetResponse]  email: null
+[2019/06/08 13:24:15][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:15][INFO][GetResponse]  transactionID: 5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993
+[2019/06/08 13:24:15][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:24:16][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:16][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:16][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '5881ec5b8b541606d6716ffddd726b43630d6f80b57d3e75406f90c2b3319ee44dc02c1a03adcbf537cd4a599cecfde9b7bbc257f1e95dcbd30a3ce71f2cb993'
+[2019/06/08 13:24:16][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:24:47][INFO][retrieveOrderRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:24:47][INFO][VerifySession]  Building client...
+[2019/06/08 13:24:47][INFO][VerifySession]  Building URI...
+[2019/06/08 13:24:47][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:24:47][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:24:47][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:24:47][INFO][VerifySession]  Sending request...
+[2019/06/08 13:24:48][INFO][VerifySession]  Sent!
+[2019/06/08 13:24:48][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:24:48][INFO][retrieveOrderRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:48][INFO][retrieveOrderRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:24:48][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:24:48][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:24:48][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:24:48][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:24:48][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@60dd0e5e, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/retrieve', method='null'}
+[2019/06/08 13:24:48][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@60dd0e5e, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/retrieve', method='null'}
+[2019/06/08 13:24:48][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a', request=edu.uci.ics.khefner.service.api_gateway.models.billing.OrderRequestModel@60dd0e5e, URI='http://127.0.0.1:3993/api/billing', endpoint='/order/retrieve', method='null'}
+[2019/06/08 13:24:48][INFO][SendRequest]  Building client...
+[2019/06/08 13:24:48][INFO][SendRequest]  Building URI...
+[2019/06/08 13:24:48][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:24:48][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:24:48][INFO][SendRequest]  endpoint path: /order/retrieve
+[2019/06/08 13:24:48][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/order/retrieve }
+[2019/06/08 13:24:48][INFO][SendRequest]  Starting invocation builder for /order/retrieve...
+[2019/06/08 13:24:48][INFO][SendRequest]  Sending request...
+[2019/06/08 13:24:48][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:48][INFO][GetResponse]  email: null
+[2019/06/08 13:24:48][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:48][INFO][GetResponse]  transactionID: 56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a
+[2019/06/08 13:24:48][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a'
+[2019/06/08 13:24:48][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:48][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:48][INFO][SendRequest]  Sent!
+[2019/06/08 13:24:48][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/order/retrieve, status=200, reason=OK}}
+[2019/06/08 13:24:48][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:48][INFO][GetResponse]  email: null
+[2019/06/08 13:24:48][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:48][INFO][GetResponse]  transactionID: 56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a
+[2019/06/08 13:24:48][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a'
+[2019/06/08 13:24:48][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":3410,"message":"Orders retrieved successfully.","transactions":[{"transactionId":"5MY64677J3872953R","state":"completed","amount":{"total":"119.52","currency":"USD"},"transaction_fee":{"value":"3.77","currency":"USD"},"create_time":"2019-06-08T20:24:38Z","update_time":"2019-06-08T20:24:38Z","items":[{"email":"user@newuser.com","movieId":"tt0311473","quantity":3,"unit_price":12.8722,"discount":0.993712,"saleDate":"2019-06-08"},{"email":"user@newuser.com","movieId":"tt0377085","quantity":5,"unit_price":19.4485,"discount":0.834481,"saleDate":"2019-06-08"}]}]}', 200)
+[2019/06/08 13:24:48][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:48][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:49][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:24:49][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:49][INFO][GetResponse]  email: null
+[2019/06/08 13:24:49][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:49][INFO][GetResponse]  transactionID: 56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a
+[2019/06/08 13:24:49][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = '56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a'
+[2019/06/08 13:24:49][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:49][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = '56becd53e8109b74ed6f1e68cf2d7f049a94630d9899378cfc45a100b7f45b8215f28b4e7b74e6991090b1bc5f87441a49a35ee6fe21e4b66d7b99c98028929a'
+[2019/06/08 13:24:49][INFO][DeleteResponse]  Query executed successfully
+[2019/06/08 13:24:58][INFO][retrieveCartRequest]  
+
+
+
+
+
+
+
+
+[2019/06/08 13:24:58][INFO][VerifySession]  Building client...
+[2019/06/08 13:24:58][INFO][VerifySession]  Building URI...
+[2019/06/08 13:24:58][INFO][VerifySession]  Setting path to endpoint...
+[2019/06/08 13:24:58][INFO][VerifySession]  Building WebTarget...
+[2019/06/08 13:24:58][INFO][VerifySession]  endpoint path: /session
+[2019/06/08 13:24:58][INFO][VerifySession]  Sending request...
+[2019/06/08 13:24:58][INFO][VerifySession]  Sent!
+[2019/06/08 13:24:58][INFO][VerifySession]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3991/api/idm/session, status=200, reason=OK}}
+[2019/06/08 13:24:58][INFO][retrieveCartRequest]  Json response: {"resultCode":130,"message":"Session is active","sessionID":"ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71"}
+[2019/06/08 13:24:58][INFO][retrieveCartRequest]  responseModel.getresulstcode: 130
+[2019/06/08 13:24:58][INFO][verifyModel]  Verifying model format...
+[2019/06/08 13:24:58][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2019/06/08 13:24:58][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2019/06/08 13:24:58][INFO][verifyModel]  Model has been validated.
+[2019/06/08 13:24:58][INFO][enqueue]  enqueue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@550ff8b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:24:58][INFO][dequeue]  dequeue: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@550ff8b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:24:58][INFO][process]  Thread with id  #2 got client request: ClientRequest{email='user@newuser.com', sessionID='ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', transactionID='c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19', request=edu.uci.ics.khefner.service.api_gateway.models.billing.Cart.CartRequestModel3@550ff8b, URI='http://127.0.0.1:3993/api/billing', endpoint='/cart/retrieve', method='null'}
+[2019/06/08 13:24:58][INFO][SendRequest]  Building client...
+[2019/06/08 13:24:58][INFO][SendRequest]  Building URI...
+[2019/06/08 13:24:58][INFO][SendRequest]  Setting path to endpoint...
+[2019/06/08 13:24:58][INFO][SendRequest]  Building WebTarget...
+[2019/06/08 13:24:58][INFO][SendRequest]  endpoint path: /cart/retrieve
+[2019/06/08 13:24:58][INFO][SendRequest]  webtarget: JerseyWebTarget { http://127.0.0.1:3993/api/billing/cart/retrieve }
+[2019/06/08 13:24:58][INFO][SendRequest]  Starting invocation builder for /cart/retrieve...
+[2019/06/08 13:24:58][INFO][SendRequest]  Sending request...
+[2019/06/08 13:24:58][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:58][INFO][GetResponse]  email: null
+[2019/06/08 13:24:58][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:58][INFO][GetResponse]  transactionID: c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19
+[2019/06/08 13:24:58][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19'
+[2019/06/08 13:24:58][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:58][INFO][GetResponse]  transactionID not found in responses table
+[2019/06/08 13:24:58][INFO][SendRequest]  Sent!
+[2019/06/08 13:24:58][INFO][SendRequest]  response content: InboundJaxrsResponse{context=ClientResponse{method=POST, uri=http://127.0.0.1:3993/api/billing/cart/retrieve, status=200, reason=OK}}
+[2019/06/08 13:24:58][INFO][InsertResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) Values ('c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19', 'user@newuser.com', 'ad2a3a4ea720cce5c9a9be2253186e27f88a1c097545840ff4f58824c490f168d6c2a4a9c329a6b4a99a9f27119bb84479454982aa29770cffaf18d8746d1d71', '{"resultCode":312,"message":"Shopping item does not exist."}', 200)
+[2019/06/08 13:24:59][INFO][InsertResponse]  Query executed successfully
+[2019/06/08 13:24:59][INFO][GetResponse]  received request to get report.
+[2019/06/08 13:24:59][INFO][GetResponse]  email: null
+[2019/06/08 13:24:59][INFO][GetResponse]  sessionID: null
+[2019/06/08 13:24:59][INFO][GetResponse]  transactionID: c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19
+[2019/06/08 13:24:59][INFO][GetResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM responses WHERE transactionid = 'c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19'
+[2019/06/08 13:24:59][INFO][GetResponse]  Query executed successfully
+[2019/06/08 13:24:59][INFO][DeleteResponse]  Executing query com.mysql.cj.jdbc.ClientPreparedStatement: DELETE FROM responses WHERE transactionid = 'c26cd3d879a43a9552d9ed6944a6fb076def77baebe3eed87b162bcede91d4ee45bfa28f403d35ad3583e69cbf674f871738808361ea339e73a541d32ad04b19'
+[2019/06/08 13:24:59][INFO][DeleteResponse]  Query executed successfully
