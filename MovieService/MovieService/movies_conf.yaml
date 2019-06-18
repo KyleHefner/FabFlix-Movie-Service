@@ -1,0 +1,29 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 3992
+  path: /api/movies
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: movies.log
+
+databaseConfig:
+  dbUsername: cs122b_db39
+  dbPassword: 365X-sHeZ2Pl
+  dbHostname: localhost
+  dbPort: 3309
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: cs122b_db39
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 3991
+  path: /api/idm
+
+idmEndpoints:
+  privilege: /privilege
+
+
